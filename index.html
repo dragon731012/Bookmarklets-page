@@ -3,11 +3,17 @@
 <h2>games</h2>
 <h3>ones I made</h3>
 
-<button class="js-copy-bob-btn">Set clipboard to BOB</button>
-<script>
-  var copyBobBtn = document.querySelector('.js-copy-bob-btn'),
+<p id="myText">Hello World</p>
+<button class="btn" onclick="copyContent()">Copy!</button>
 
-  copyBobBtn.addEventListener('click', function(event) {
-    copyTextToClipboard('Bob');
-  });
+<script>
+  let text = document.getElementById('myText').innerHTML;
+  const copyContent = async () => {
+    try {
+      await navigator.clipboard.writeText(text);
+      console.log('Content copied to clipboard');
+    } catch (err) {
+      console.error('Failed to copy: ', err);
+    }
+  }
 </script>
