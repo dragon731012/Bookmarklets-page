@@ -2,4 +2,12 @@
 
 <h2>games</h2>
 <h3>ones I made</h3>
-<a href="src='https://raw.githubusercontent.com/dragon731012/-WORKING-bookmarklets-and-games/main/games/breakout%20(by%20me).js'">test</a>
+
+<button class="js-copy-bob-btn">Set clipboard to BOB</button>
+<script>
+  var copyBobBtn = document.querySelector('.js-copy-bob-btn'),
+
+  copyBobBtn.addEventListener('click', function(event) {
+    copyTextToClipboard('Bob');
+  });
+</script>
