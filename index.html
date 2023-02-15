@@ -3,12 +3,12 @@
 <p style="text-align:center"> <font size="7">games</font></p>
 <p style="text-align:center"> <font size="4">ones I made</font></p>
 
-<p id="myText" style="position:fixed; right:10000000000000000000000000000000px; bottom:10px;" align="right">test</font></p>
-<button class="btn" onclick="copyContent()">Copy!</button>
+<p id="breakout" style="position:fixed; right:10000000000000000000000000000000px; bottom:10px;" align="right">test</font></p>
+<button class="btn" onclick="copyContentbreakout()">breakout</button>
 
 <script>
-  let text = document.getElementById('myText').innerText;
-  const copyContent = async () => {
+  let text = document.getElementById('breakout').innerText;
+  const copyContentbreakout = async () => {
     try {
       await navigator.clipboard.writeText(text);
       alert('copied to clipboard');
