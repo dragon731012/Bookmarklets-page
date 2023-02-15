@@ -13,7 +13,7 @@
       await navigator.clipboard.writeText(text);
       alert('copied to clipboard');
     } catch (err) {
-      console.error('Failed to copy: ', err);
+      alert('Failed to copy: '+err);
     }
   }
 </script>
