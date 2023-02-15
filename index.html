@@ -7,7 +7,7 @@
 <button class="btn" onclick="copyContent()">Copy!</button>
 
 <script>
-  let text = document.getElementById('myText').innerHTML;
+  let text = document.getElementById('myText').innerText;
   const copyContent = async () => {
     try {
       await navigator.clipboard.writeText(text);
