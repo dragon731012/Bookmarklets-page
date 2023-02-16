@@ -3,15 +3,27 @@
 <p style="text-align:center"> <font size="7">games</font></p>
 <p style="text-align:center"> <font size="4">ones I made</font></p>
 
-<p id="breakout" style="position:fixed; right:10000000000000000000000000000000px; bottom:10px;" align="right">javascript:var q = document.createElement('script');q.src = 'http://svnpenn.github.io/bm/yt.js';document.body.appendChild(q);void 0;</font></p>
+<p id="breakout" style="position:fixed; right:10000000000000000000000000000000px; bottom:10px;" align="right">javascript:var q = document.createElement('script');q.src = 'https://inquisitive-paletas-b89327.netlify.app/games/breakout%20(by%20me).js';document.body.appendChild(q);void 0;</font></p>
+<p id="dodgysquare" style="position:fixed; right:10000000000000000000000000000000px; bottom:10px;" align="right">javascript:var q = document.createElement('script');q.src = 'https://inquisitive-paletas-b89327.netlify.app/games/dodgysquare%20(i%20made%20this%20one%202)';document.body.appendChild(q);void 0;</font></p>
+
 
 <button class="btn" onclick="copyContentbreakout()">breakout</button>
+<button class="btn" onclick="copyContentdodge()">breakout</button>
 
 <script>
   let text = document.getElementById('breakout').innerText;
   const copyContentbreakout = async () => {
     try {
       await navigator.clipboard.writeText(text);
+      alert('copied to clipboard');
+    } catch (err) {
+      alert('Failed to copy: '+err);
+    }
+  }
+  let text2 = document.getElementById('dodgysquare').innerText;
+  const copyContentdodge = async () => {
+    try {
+      await navigator.clipboard.writeText(text2);
       alert('copied to clipboard');
     } catch (err) {
       alert('Failed to copy: '+err);
